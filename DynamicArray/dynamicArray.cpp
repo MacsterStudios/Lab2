@@ -10,7 +10,7 @@ int DynamicArray::getElement(const unsigned int _index) const{
 }
 
 void DynamicArray::setCapacite(const unsigned int _capacite){
-	if (_capacite < 1) throw std::runtime_error("Le tableau doit avoir une capacité d'au moins 1.");
+	if (_capacite < 1) throw std::invalid_argument("Le tableau doit avoir une capacité d'au moins 1.");
 	int *ancienTableau = tabElements;
 	int ancienneCapacite = capacite;
 	capacite = _capacite;
