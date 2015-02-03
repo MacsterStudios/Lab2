@@ -22,6 +22,15 @@ DynamicArray& DynamicArray::operator=(const DynamicArray &_source){
 	return *this;
 }
 
+bool DynamicArray::operator==(const DynamicArray &_rhs) const{
+	bool returnVal = true;
+	if (capacite != _rhs.getCapacite()) returnVal = false;
+	for (unsigned int i = 0; i < capacite; i++){
+		if (tabElements[i] != _rhs.getElement(i)) returnVal = false;
+	}
+	return returnVal;
+}
+
 unsigned int DynamicArray::getCapacite() const{
 	return capacite;
 }
