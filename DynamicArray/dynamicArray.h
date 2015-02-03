@@ -19,6 +19,8 @@ public:
 
 	DynamicArray(const DynamicArray &_source);
 
+	DynamicArray & operator=(const DynamicArray &_source);
+
 	void setElement(const unsigned int _index, const int _valeur);
 	int getElement(const unsigned int _index) const;
 	unsigned int getCapacite() const;

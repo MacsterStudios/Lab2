@@ -10,6 +10,18 @@ DynamicArray::DynamicArray(const DynamicArray &_source) :
 	}
 }
 
+DynamicArray& DynamicArray::operator=(const DynamicArray &_source){
+	if(&_source != this){
+		delete[] tabElements;
+		capacite = _source.capacite;
+		tabElements = new int[_source.capacite];
+		for (unsigned int i = 0; i < capacite; i++){
+			tabElements[i] = _source.getElement(i);
+		}
+	}
+	return *this;
+}
+
 unsigned int DynamicArray::getCapacite() const{
 	return capacite;
 }
