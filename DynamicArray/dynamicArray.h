@@ -21,6 +21,7 @@ public:
 
 	DynamicArray & operator=(const DynamicArray &_source);
 	bool operator==(const DynamicArray &_rhs) const;
+	DynamicArray& operator+=(const DynamicArray &_rhs);
 
 	void setElement(const unsigned int _index, const int _valeur);
 	int getElement(const unsigned int _index) const;
