@@ -1,6 +1,15 @@
 #include "dynamicArray.h"
 
 
+DynamicArray::DynamicArray(const DynamicArray &_source) :
+	capacite(_source.getCapacite()),
+	tabElements(new int[_source.getCapacite()])
+{
+	for (unsigned int i = 0; i < capacite; i++){
+		tabElements[i] = _source.getElement(i);
+	}
+}
+
 unsigned int DynamicArray::getCapacite() const{
 	return capacite;
 }
