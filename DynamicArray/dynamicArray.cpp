@@ -30,10 +30,8 @@ void DynamicArray::setElement(const unsigned int _index, const int _valeur){
 	//if (_index + 1 > capacite) throw std::runtime_error("La pile est trop petite; l'index recherché n'éxiste pas.");
 	if (_index + 1 > capacite){
 		setCapacite(_index + 1);
-		setElement(_index, _valeur);
 	}
-	else{
-		tabElements[_index] = _valeur;
-	}
+	tabElements[_index] = _valeur;
+	
 	
 }

@@ -10,7 +10,7 @@ public:
 	DynamicArray(unsigned int _capacite = 100) :
 		capacite(_capacite)
 		{
-		if (capacite < 1) throw std::runtime_error("Le tableau doit avoir une capacité d'au moins 1.");
+		if (_capacite < 1) throw std::runtime_error("Le tableau doit avoir une capacité d'au moins 1.");
 		tabElements = new int[capacite];
 		for (unsigned int i = 0; i < capacite; i++){
 			tabElements[i] = 0;
