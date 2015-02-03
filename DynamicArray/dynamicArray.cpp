@@ -16,7 +16,7 @@ void DynamicArray::setCapacite(const unsigned int _capacite){
 	capacite = _capacite;
 	tabElements = new int[capacite];
 	for (unsigned int i = 0; i < capacite; i++){
-		if (i < capacite){
+		if (i < ancienneCapacite){
 			tabElements[i] = ancienTableau[i];
 		}
 		else{

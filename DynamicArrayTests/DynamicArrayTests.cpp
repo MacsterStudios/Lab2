@@ -34,7 +34,7 @@ namespace DynamicArrayTests
 			DynamicArray tableau;
 
 			//Assert
-			for (int i = 0; i < tableau.getCapacite(); i++)
+			for (unsigned int i = 0; i < tableau.getCapacite(); i++)
 			{
 				Assert::AreEqual(0, tableau.getElement(i));
 			}
@@ -58,8 +58,8 @@ namespace DynamicArrayTests
 		TEST_METHOD(augumenter_la_capacite_d_un_dynamicArray_devrait_preserver_le_contenu_deja_present)
 		{
 			//Arrange
-			const int CAPACITE_DEPART = 3;
-			const int NOUVELLE_CAPACITE = 5;
+			const unsigned int CAPACITE_DEPART = 3;
+			const unsigned int NOUVELLE_CAPACITE = 5;
 
 			DynamicArray tableau(CAPACITE_DEPART);
 
