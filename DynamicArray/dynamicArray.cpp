@@ -6,6 +6,7 @@ unsigned int DynamicArray::getCapacite() const{
 }
 
 int DynamicArray::getElement(const unsigned int _index) const{
+	if (_index >= capacite) throw std::out_of_range("Élément hors tableau");
 	return tabElements[_index];
 }
 
