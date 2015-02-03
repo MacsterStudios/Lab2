@@ -24,17 +24,22 @@ DynamicArray& DynamicArray::operator=(const DynamicArray &_source){
 
 bool DynamicArray::operator==(const DynamicArray &_rhs) const{
 	bool returnVal = true;
-	if (capacite != _rhs.getCapacite()) returnVal = false;
-	for (unsigned int i = 0; i < capacite; i++){
-		if (tabElements[i] != _rhs.getElement(i)) returnVal = false;
+	if (capacite != _rhs.getCapacite()){
+		returnVal = false;
+	}
+	else{
+		for (unsigned int i = 0; i < capacite; i++){
+			if (tabElements[i] != _rhs.getElement(i)) returnVal = false;
+		}
 	}
 	return returnVal;
 }
 
 DynamicArray& DynamicArray::operator+=(const DynamicArray &_rhs){
-	int capaciteDepart = capacite;
-	setCapacite(capacite + _rhs.getCapacite());
-	for (unsigned int i = 0; i < _rhs.getCapacite(); i++){
+	unsigned int capaciteDepart = capacite;
+	unsigned int capaciteRHS = _rhs.getCapacite();
+	setCapacite(capaciteDepart + capaciteRHS);
+	for (unsigned int i = 0; i < capaciteRHS; i++){
 		tabElements[i + capaciteDepart] = _rhs.getElement(i);
 	}
 
